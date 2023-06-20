@@ -87,7 +87,7 @@ class Password:
         question = inquirer.Password(
             name=self.name,
             message=self.name,
-            mask="*" if self.mask is None else self.mask,
+            echo="*" if self.mask is None else self.mask,
         )
         return inquirer.prompt([question])[self.name]
 
